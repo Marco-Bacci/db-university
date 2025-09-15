@@ -16,17 +16,27 @@ Esportare quindi il diagramma in jpg e caricarlo nella repo.
 PROSEGUIMENTO ESERCIZIO:
 Dopo aver creato un nuovo database nel vostro MySQL Workbench e aver importato lo schema allegato, eseguite le query del file allegato.
 
-Queries of first 4 
+Queries from 1 to 4
 
 1)   SELECT * FROM `students` WHERE YEAR (`date_of_birth`) = 1990
 2)   SELECT * FROM `courses` WHERE `cfu` > 10
 3)   SELECT * from `STUDENTS` WHERE YEAR (`date_of_birth`) <= 1994
 4)   SELECT * FROM `courses` WHERE `year` = 1 AND `period`LIKE "I_s%"
 
-Queries of last 4
+Queries from 5 to 8
 
 5)   SELECT * FROM `exams` WHERE DATE (`date`) = "2020-06-20" AND TIME (`hour`) > "14:00:00"
 6)   SELECT * FROM `degrees` WHERE `level` = "magistrale"
 7)   SELECT * FROM `departments` 
 8)   SELECT * FROM `teachers` WHERE `phone` IS NULL
+
+Second page Queries 
+
+1)  SELECT COUNT(*) AS `iscritti`,  `enrolment_date`  FROM `students` GROUP BY `enrolment_date`
+2)  SELECT COUNT(*) AS `numero_insegnati`, `office_address` FROM `teachers` GROUP BY `office_address`
+3)  SELECT AVG(`vote`) FROM `exam_student`
+4)  SELECT `department_id`, COUNT(*) AS `numero_corsi` FROM `degrees` GROUP BY `department_id`
+
+
+
 
