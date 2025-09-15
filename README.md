@@ -17,12 +17,14 @@ PROSEGUIMENTO ESERCIZIO:
 Dopo aver creato un nuovo database nel vostro MySQL Workbench e aver importato lo schema allegato, eseguite le query del file allegato.
 
 Queries of first 4 
+
 1)   SELECT * FROM `students` WHERE YEAR (`date_of_birth`) = 1990
 2)   SELECT * FROM `courses` WHERE `cfu` > 10
 3)   SELECT * from `STUDENTS` WHERE YEAR (`date_of_birth`) <= 1994
 4)   SELECT * FROM `courses` WHERE `year` = 1 AND `period`LIKE "I_s%"
 
 Queries of last 4
+
 5)   SELECT * FROM `exams` WHERE DATE (`date`) = "2020-06-20" AND TIME (`hour`) > "14:00:00"
 6)   SELECT * FROM `degrees` WHERE `level` = "magistrale"
 7)   SELECT * FROM `departments` 
