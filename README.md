@@ -36,7 +36,22 @@ Second page Queries
 2)  SELECT COUNT(*) AS `numero_insegnati`, `office_address` FROM `teachers` GROUP BY `office_address`ok
 3)  SELECT AVG(`vote`) FROM `exam_student` GROUP BY `exam_id`ok
 4)  SELECT `department_id`, COUNT(*) AS `numero_corsi` FROM `degrees` GROUP BY `department_id`
+===
+PROSEGUIMENTO ESERCIZIO
+Utilizzando lo stesso database di ieri, eseguite le query in allegato.
+Caricate un secondo file nella stessa repo di ieri (db-university) con le query di oggi.
 
+1. Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+2. SELECT *
+FROM `students`
+JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+WHERE `degrees`.`name` = "Corso di Laurea in Economia"
 
-
+2. Selezionare tutti i Corsi di Laurea Magistrale del Dipartimento di
+ Neuroscienze
+SELECT *
+FROM `degrees`
+JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+WHERE `departments`.`name` = "Dipartimento di Neuroscienze"
+AND `degrees`.`level` = 'magistrale'
 
