@@ -27,14 +27,14 @@ Queries from 5 to 8
 
 5)   SELECT * FROM `exams` WHERE DATE (`date`) = "2020-06-20" AND TIME (`hour`) > "14:00:00"
 6)   SELECT * FROM `degrees` WHERE `level` = "magistrale"
-7)   SELECT * FROM `departments` 
-8)   SELECT * FROM `teachers` WHERE `phone` IS NULL
+7)   SELECT COUNT(*) FROM AS `num_departments` `departments` 
+8)   SELECT COUNT(*) AS `num_teachers` FROM `teachers` WHERE `phone` IS NULL
 
 Second page Queries 
 
-1)  SELECT COUNT(*) AS `iscritti`,  `enrolment_date`  FROM `students` GROUP BY `enrolment_date`
-2)  SELECT COUNT(*) AS `numero_insegnati`, `office_address` FROM `teachers` GROUP BY `office_address`
-3)  SELECT AVG(`vote`) FROM `exam_student`
+1)  SELECT COUNT(*) AS `iscritti`,  YEAR (`enrolment_date`) AS `year` FROM `students` GROUP BY `year`
+2)  SELECT COUNT(*) AS `numero_insegnati`, `office_address` FROM `teachers` GROUP BY `office_address`ok
+3)  SELECT AVG(`vote`) FROM `exam_student` GROUP BY `exam_id`ok
 4)  SELECT `department_id`, COUNT(*) AS `numero_corsi` FROM `degrees` GROUP BY `department_id`
 
 
